@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <header>
+    <h1>Andreas Beez</h1>
+    <h2>Rechtsanwalt / Fachanwalt für Arbeitsrecht</h2>
+  </header>
+  
+  <nav>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#leistungen">Leistungen</a>
+  </nav>
+  
+  <main>
+    {{ content }}
+  </main>
+  
+  <footer>
+    <p>&copy; {{ site.time | date: '%Y' }} Andreas Beez</p>
+  </footer>
+</body>
+</html>
