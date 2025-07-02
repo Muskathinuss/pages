@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andreas Beez - Rechtsanwalt</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+    }
+    header, nav, main, footer {
+      margin: 0 auto;
+      max-width: 800px; /* Erhöht für mehr Platz */
+      padding: 1em;
+    }
+    header {
+      background: #283593;
+      color: white;
+      text-align: center;
+    }
+    nav {
+      background: #3f51b5;
+      margin-top: 0.5em;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 0.5em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      background: white;
+      margin-top: 0.5em;
+      min-height: 300px;
+      padding: 1em;
+    }
+    footer {
+      text-align: center;
+      margin-top: 1em;
+      font-size: 0.9em;
+      color: #666;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 2em;
+      border-radius:5px;
+    }
+    .contact-info {
+      margin: 2em;
+    }
+    .content-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      align-items: flex-start;
+      margin: 2em auto;
+      justify-content: center;
+    }
+    
+    .map{
+      width: 80%;
+      margin: 2em auto;
+
+    }
+  
+    @media (max-width: 1em) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Andreas Beez</h1>
+    <h2>Rechtsanwalt / Fachanwalt für Arbeitsrecht</h2>
+  </header>
+  <nav>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#ueber_mich">Über Mich</a>
+  </nav>
+  <main>
+    
+    <div class="content-wrapper">
+  
+      <div class="contact-info">
+        <h2 id="kontakt">Kontakt</h2>
+        <p>Andreas Beez</p>
+        <p>Rechtsanwalt / FA-Arbeitsrecht</p>
+        <p>Email: <a href="mailto:rabeez@gmx.de">rabeez@gmx.de</a></p>
+        <p>Telefon: <a href="tel:+4915202993973">+49 1520 2993973</a></p>
+        <p>Adresse: Uhlemeyerstr. 6, 30175 Hannover</p>
+      </div>
+      <div class="images">
+        <img src="https://mav-seminare.de/fileadmin/user_upload/andreas_beez.jpg" alt="Bild von Andreas Beez">
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe
+      width="100%"
+        height="300"
+        style="border-radius: 5px;"
+        frameborder="0" 
+        scrolling="yes" 
+        marginheight="0" 
+        marginwidth="0" 
+        src="https://www.openstreetmap.org/export/embed.html?bbox=9.743%2C52.375%2C9.76%2C52.38&amp;marker=52.377476%2C9.750986&amp;layer=mapnik"
+      ></iframe>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Andreas Beez | Webseite erstellt von Kathi Borrmann</p>
+  </footer>
+</body>
+</html>
