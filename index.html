@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andreas Beez - Rechtsanwalt</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --primary: #1a365d;
@@ -20,66 +23,69 @@
       --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       --radius: 8px;
       --transition: all 0.3s ease;
+      --hover-scale: 1.01;
     }
-    
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       font-family: 'Source Sans Pro', sans-serif;
       color: var(--text);
       background: var(--bg);
       line-height: 1.6;
     }
-    
-    h1, h2, h3, h4 {
+
+    h1,
+    h2,
+    h3,
+    h4 {
       font-family: 'Playfair Display', serif;
       line-height: 1.2;
     }
-    
+
     a {
-      color: var(--primary-light);
-      text-decoration: none;
+      text-decoration: solid;
       transition: var(--transition);
     }
-    
+
     a:hover {
-      color: var(--primary);
+      text-decoration: underline;
     }
-    
+
     .container {
       width: 90%;
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
     }
-    
+
     header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
       color: var(--white);
-      padding: 3rem 0;
+      padding: 2rem;
       position: relative;
     }
-    
+
     header .container {
       align-items: center;
       justify-content: center;
       text-align: center;
     }
-    
+
     header h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-size: 3rem;
       margin-bottom: 0.5rem;
     }
-    
+
     header h2 {
       font-weight: 400;
-      font-size: clamp(1rem, 3vw, 1.5rem);
+      font-size: 1.5rem;
       opacity: 0.9;
     }
-    
+
     nav {
       background: var(--white);
       box-shadow: var(--shadow);
@@ -87,13 +93,13 @@
       top: 0;
       z-index: 100;
     }
-    
+
     nav .container {
       display: flex;
       justify-content: center;
       padding: 1rem 0;
     }
-    
+
     nav a {
       color: var(--primary);
       margin: 0 1.5rem;
@@ -101,7 +107,7 @@
       position: relative;
       padding: 0.5rem 0;
     }
-    
+
     nav a::after {
       content: '';
       position: absolute;
@@ -112,122 +118,134 @@
       background-color: var(--primary);
       transition: var(--transition);
     }
-    
+
     nav a:hover::after {
       width: 100%;
     }
-    
+
     main {
       padding: 4rem 0;
     }
-    
+
     .content-wrapper {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
-      margin-bottom: 4rem;
-      align-items: start;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+      width: 100%;
     }
-    
+
     .contact-info {
       background: var(--white);
       padding: 2rem;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
     }
-    
+
+  
+
     .contact-info h2 {
       color: var(--primary);
       margin-bottom: 1.5rem;
       padding-bottom: 0.5rem;
       border-bottom: 2px solid var(--secondary);
+      font-size: 1.5rem;
+
     }
-    
+
     .contact-info p {
       margin-bottom: 0.75rem;
       color: var(--text-light);
+      font-size: 1.1rem;
     }
-    
+
     .contact-info p:first-of-type {
       font-weight: 600;
       color: var(--text);
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
-    
+
     .images {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
     }
-    
+
     .images img {
       max-width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       transition: var(--transition);
     }
-    
+
     .images img:hover {
-      transform: scale(1.02);
+      transform: scale(var(--hover-scale));
     }
-    
+
     .map {
       width: 100%;
       background: var(--white);
-      padding: 1rem;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
+      transition: var(--transition);
     }
-    
+
     .map iframe {
       border-radius: var(--radius);
       width: 100%;
       height: 400px;
     }
-    
+
+    .map:hover {
+      transform: scale(var(--hover-scale));
+    }
+
     footer {
       background: var(--primary);
       color: var(--white);
       padding: 2rem 0;
       text-align: center;
     }
-    
+
     footer p {
       opacity: 0.8;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
-    
+
     @media (max-width: 768px) {
       .content-wrapper {
         grid-template-columns: 1fr;
       }
-      
-      nav a {
-        margin: 0 0.75rem;
+
+      .images {
+        justify-content: center;
       }
     }
 
-    /* Legal icon addition */
-    .contact-info {
-      position: relative;
-      padding-top: 3.5rem;
+    .contact-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.5rem 1rem;
+      font-size: 1.1rem;
     }
-    
-    .contact-info::before {
-      content: "⚖️";
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 3rem;
-      background: var(--white);
-      padding: 0.5rem;
-      border-radius: 50%;
-      box-shadow: var(--shadow);
+
+    .contact-label {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .contact-value {
+      color: var(--text-light);
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container">
@@ -235,14 +253,14 @@
       <h2>Rechtsanwalt / Fachanwalt für Arbeitsrecht</h2>
     </div>
   </header>
-  
+
   <nav>
     <div class="container">
-      <a href="#kontakt">Kontakt</a>
-      <a href="#ueber_mich">Über Mich</a>
+      <a href="./ueber_mich.html">Kontakt</a>
+      <a href="ueber_mich.html">Über Mich</a>
     </div>
   </nav>
-  
+
   <main>
     <div class="container">
       <div class="content-wrapper">
@@ -250,33 +268,35 @@
           <h2 id="kontakt">Kontakt</h2>
           <p>Andreas Beez</p>
           <p>Rechtsanwalt / FA-Arbeitsrecht</p>
-          <p>Email: <a href="mailto:rabeez@gmx.de">rabeez@gmx.de</a></p>
-          <p>Telefon: <a href="tel:+4915202993973">+49 1520 2993973</a></p>
-          <p>Adresse: Uhlemeyerstr. 6, 30175 Hannover</p>
+          <div class="contact-grid">
+            <div class="contact-label">Email:</div>
+            <div class="contact-value"><a href="mailto:rabeez@gmx.de">rabeez@gmx.de</a></div>
+
+            <div class="contact-label">Telefon:</div>
+            <div class="contact-value"><a href="tel:+4915202993973">+49 1520 2993973</a></div>
+
+            <div class="contact-label">Adresse:</div>
+            <div class="contact-value">Uhlemeyerstr.&nbsp;6, 30175&nbsp;Hannover</div>
+          </div>
         </div>
-        
+
         <div class="images">
-          <img src="https://mav-seminare.de/fileadmin/user_upload/andreas_beez.jpg" alt="Bild von Andreas Beez">
+          <img src="https://cdn.pixabay.com/photo/2023/10/10/13/33/law-firm-8306442_960_720.jpg" alt="Bild von Andreas Beez">
         </div>
       </div>
 
       <div class="map">
-        <iframe
-          height="300"
-          frameborder="0" 
-          scrolling="yes" 
-          marginheight="0" 
-          marginwidth="0" 
-          src="https://www.openstreetmap.org/export/embed.html?bbox=9.743%2C52.375%2C9.76%2C52.38&amp;marker=52.377476%2C9.750986&amp;layer=mapnik"
-        ></iframe>
+        <iframe height="300" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=9.743%2C52.375%2C9.76%2C52.38&amp;marker=52.377476%2C9.750986&amp;layer=mapnik"></iframe>
       </div>
     </div>
   </main>
-  
+
   <footer>
     <div class="container">
       <p>&copy; 2025 Andreas Beez | Webseite erstellt von Kathi Borrmann</p>
     </div>
   </footer>
 </body>
+
 </html>
