@@ -240,6 +240,10 @@
       font-size: 0.8rem;
     }
 
+    .profile-image {
+      float: right; max-width: 300px; height: 400px; margin: 1rem;
+    }
+
     @media (max-width: 768px) {
       .content-wrapper {
         grid-template-columns: 1fr;
@@ -247,6 +251,19 @@
 
       .images {
         justify-content: center;
+      }
+
+  
+    }
+
+    @media (max-width: 400px)
+    {
+      .profile-image {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
       }
     }
 
@@ -330,7 +347,7 @@
       <section id="ueber-mich-page" class="page-content">
         <div class="contact-info" style="display: block;">
           <h2 id="kontakt">Über Mich</h2>
-          <div class="images" style="float: right; max-width: 300px; height: 400px; margin: 1rem;" >
+          <div class="images profile-image" >
             <img src="https://media.istockphoto.com/id/87300663/de/foto/ein-anwalt-und-der-jury.jpg?s=612x612&w=0&k=20&c=tdGPC7uYBouMi7OiGRGaG_34xU7t7MpwvgCARvkd4v0="
               alt="Bild von Andreas Beez">
           </div>
@@ -338,7 +355,7 @@
           <p>
             Hallo, ich bin Andreas Beez,
           </p>
-          <p >
+          <p>
             Das ist ein Beispieltext, was hier stehen könnte.<br>
             Ich bin seit 15 Jahren Rechtsanwalt und Fachanwalt für Arbeitsrecht.
             Seit 10 Jahren bin ich in Hannover tätig und habe mich auf Arbeitsrecht spezialisiert.
